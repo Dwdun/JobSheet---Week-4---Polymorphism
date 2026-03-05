@@ -1,6 +1,6 @@
 public class Commission extends Hourly{
-    double totalSales;
-    double commissionRate;
+    protected double totalSales;
+    protected double commissionRate;
 
     public Commission(String eName, String eAddress, String ePhone, String socSecNumber, double rate,double comrate){
         super(eName,eAddress,ePhone,socSecNumber,rate);

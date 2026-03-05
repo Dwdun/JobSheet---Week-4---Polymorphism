@@ -1,6 +1,6 @@
 public class WeeklySales {
     public static void main(String[] args) {
-        Salesperson[] salesStaff = new Salesperson[10];
+        Salesperson[] salesStaff = new Salesperson[13];
         salesStaff[0] = new Salesperson("Jane", "Jones", 3000);
         salesStaff[1] = new Salesperson("Daffy", "Duck", 4935);
         salesStaff[2] = new Salesperson("James", "Jones", 3000);
@@ -11,11 +11,22 @@ public class WeeklySales {
         salesStaff[7] = new Salesperson("Andy", "Adams", 5000);
         salesStaff[8] = new Salesperson("Jim", "Doe", 2850);
         salesStaff[9] = new Salesperson("Walt", "Smith", 3000);
+        salesStaff[10] = new Salesperson("Faqih", "Shiam", 7000);
+        salesStaff[11] = new Salesperson("Faqih", "Shiam", 1000);
+        salesStaff[12] = new Salesperson("Faqih", "Dudun", 4000);
 
+        Sorting.selectionSort(salesStaff);
+
+        System.out.println ("\nRanking of Sales for the Week (ascending) \n");
+        for (Salesperson s : salesStaff) {
+            System.out.println(s);
+        }
+        
         Sorting.insertionSort(salesStaff);
 
-        System.out.println ("\nRanking of Sales for the Week\n");
-        for (Salesperson s : salesStaff)
+        System.out.println ("\nRanking of Sales for the Week (descending)\n");
+        for (Salesperson s : salesStaff) {
             System.out.println (s);
+        }
     }
 }
